@@ -40,7 +40,7 @@ intptr_t CALLBACK AboutDlg::run_dlgProc(UINT message, WPARAM wParam, LPARAM lPar
 			buildTime +=  wmc.char2wchar(__TIME__, CP_ACP);
 
 			NppParameters& nppParam = NppParameters::getInstance();
-			LPCTSTR bitness = nppParam.archType() == IMAGE_FILE_MACHINE_I386 ? L"(32-bit)" : nppParam.archType() == IMAGE_FILE_MACHINE_AMD64 ? L"(64-bit)" : L"(ARM 64-bit)";
+			LPCTSTR bitness = nppParam.archType() == IMAGE_FILE_MACHINE_I386 ? L"(32-bit)" : nppParam.archType() == IMAGE_FILE_MACHINE_AMD64 ? L"(64-bit)" : nppParam.archType() == IMAGE_FILE_MACHINE_ARM ? L"(ARM 32-bit)" : L"(ARM 64-bit)";
 			::SetDlgItemText(_hSelf, IDC_VERSION_BIT, bitness);
 
 			::SendMessage(compileDateHandle, WM_SETTEXT, 0, reinterpret_cast<LPARAM>(buildTime.c_str()));
@@ -169,7 +169,7 @@ intptr_t CALLBACK DebugInfoDlg::run_dlgProc(UINT message, WPARAM wParam, LPARAM 
 
 			// Notepad++ version
 			_debugInfoStr = NOTEPAD_PLUS_VERSION;
-			_debugInfoStr += nppParam.archType() == IMAGE_FILE_MACHINE_I386 ? L"   (32-bit)" : nppParam.archType() == IMAGE_FILE_MACHINE_AMD64 ? L"   (64-bit)" : L"   (ARM 64-bit)";
+			_debugInfoStr += nppParam.archType() == IMAGE_FILE_MACHINE_I386 ? L"   (32-bit)" : nppParam.archType() == IMAGE_FILE_MACHINE_AMD64 ? L"   (64-bit)" : nppParam.archType() == IMAGE_FILE_MACHINE_ARM ? L"   (ARM 32-bit)" : L"   (ARM 64-bit)";
 			_debugInfoStr += L"\r\n";
 
 			// Build time

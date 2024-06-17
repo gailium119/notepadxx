@@ -11,6 +11,8 @@
 [Rr]elease/
 x64/
 x86/
+ARM/
+ARM64/
 #[Bb]in/
 [Oo]bj/
 *.pdb
@@ -77,6 +79,7 @@ PowerEditor/bin/plugins/
 PowerEditor/bin/updater/
 PowerEditor/bin/functionList/
 PowerEditor/bin64/
+PowerEditor/binarm/
 PowerEditor/binarm64/
 PowerEditor/bin/themes/
 PowerEditor/installer/bin/wingup/
@@ -91,16 +94,17 @@ PowerEditor/visual.net/Unicode Debug/
 PowerEditor/visual.net/Unicode Release/
 PowerEditor/visual.net/Debug/
 PowerEditor/visual.net/Release/
-PowerEditor/visual.net/notepadPlus.sln
 PowerEditor/visual.net/notepadPlus.vcxproj.filters
 PowerEditor/visual.net/x64/Unicode Debug/
 PowerEditor/visual.net/x64/Unicode Release/
 PowerEditor/visual.net/x64/Debug/
 PowerEditor/visual.net/x64/Release/
 PowerEditor/visual.net/ARM64
+PowerEditor/visual.net/ARM
 PowerEditor/src/tools/NppShell/build_ARM64
 PowerEditor/src/tools/NppShell/build_Win32
 PowerEditor/src/tools/NppShell/build_x64
+PowerEditor/src/tools/NppShell/build_ARM
 
 # scintilla - generated files
 scintilla/bin/SciLexer.*

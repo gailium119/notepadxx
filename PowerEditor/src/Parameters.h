@@ -43,8 +43,11 @@
 #endif
 
 #else
+#ifdef _M_ARM
+#define ARCH_TYPE IMAGE_FILE_MACHINE_ARM
+#else
 #define ARCH_TYPE IMAGE_FILE_MACHINE_I386
-
+#endif
 #endif
 
 #define CMD_INTERPRETER TEXT("%COMSPEC%")
